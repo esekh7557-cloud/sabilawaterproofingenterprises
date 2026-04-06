@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Work+Sans:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#8ebcfc",
+                        "on-secondary-container": "#6e5700",
+                        "tertiary-fixed": "#e4e2e2",
+                        "surface-bright": "#fbf9f8",
+                        "secondary-container": "#fecc0f",
+                        "on-secondary-fixed-variant": "#584400",
+                        "on-surface-variant": "#424750",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d3e3ff",
+                        "on-primary-fixed-variant": "#084881",
+                        "surface-dim": "#dbd9d9",
+                        "surface": "#fbf9f8",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "inverse-primary": "#a3c9ff",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-tint": "#2d609a",
+                        "surface-container-high": "#eae8e7",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1b1c1c",
+                        "secondary-fixed-dim": "#f1c100",
+                        "inverse-surface": "#303030",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c2c6d1",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#001c39",
+                        "surface-variant": "#e4e2e2",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "outline": "#727781",
+                        "on-surface": "#1b1c1c",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#0f4b84",
+                        "tertiary-container": "#4a4a4a",
+                        "background": "#fbf9f8",
+                        "tertiary": "#333434",
+                        "on-tertiary-container": "#bbb9b9",
+                        "primary": "#003462",
+                        "secondary": "#745b00",
+                        "surface-container": "#efeded",
+                        "secondary-fixed": "#ffe08b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Work Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-shield {
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    </style>
+<script defer src="assets/site.js"></script>
+<link href="assets/responsive.css" rel="stylesheet"/>
+</head>
+<body class="bg-surface font-body text-on-surface" data-page="projects.html">
+<header data-site-header></header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-5 sm:px-8 py-24 max-w-7xl mx-auto overflow-hidden">
+<!-- Refined, subtle blue background background shape inspired by SCREEN_6's deep brand blue but used as a sophisticated accent element -->
+<div class="hidden lg:block absolute top-0 right-0 w-1/3 h-full bg-[#001c39]/5 -z-10 rounded-bl-[100px]"></div>
+<div class="hidden md:block absolute top-12 right-12 w-64 h-64 bg-[#001c39]/10 -z-20 rounded-full blur-3xl"></div>
+<div class="max-w-3xl">
+<label class="font-label text-secondary font-bold tracking-[0.2em] mb-4 block uppercase">Our Legacy in Steel &amp; Stone</label>
+<h1 class="font-headline text-5xl md:text-7xl font-black text-primary leading-tight mb-8 tracking-tighter">
+                Built to <span class="text-secondary">Last</span>,<br/>Designed to Inspire.
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+                A collection of our most ambitious architectural achievements and meticulous home transformations across the tristate area.
+            </p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex bg-primary text-on-primary px-5 sm:px-8 py-4 rounded-lg font-headline font-bold text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="contact.html">Start Your Project</a>
+<a class="inline-flex bg-white border-2 border-primary text-primary px-5 sm:px-8 py-4 rounded-lg font-headline font-bold text-base hover:bg-primary hover:text-white transition-all" href="services.html">View Technical Services</a>
+</div>
+</div>
+</section>
+<!-- Category Filters -->
+<section class="px-5 sm:px-8 pb-12 max-w-7xl mx-auto">
+<div class="flex flex-wrap gap-4 items-center">
+<span class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest mr-2">Filter by:</span>
+<button class="px-6 py-2 rounded-full bg-primary text-white font-semibold text-sm transition-all shadow-md" type="button" data-filter-button="all">All Projects</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="residential">Residential</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="commercial">Commercial</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="renovation">Renovations</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="industrial">Industrial</button>
+</div>
+</section>
+<!-- Project Gallery - Bento Grid -->
+<section class="px-5 sm:px-8 py-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Large Featured Item -->
+<div class="md:col-span-8 group relative overflow-hidden project-shield bg-surface-container-lowest" data-project-card="commercial">
+<div class="aspect-[16/9] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern architectural concrete building with large glass windows and minimalist landscaping during blue hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBjtOSST0Z340rzK2Jv8B3Nxle2p8OIUlR-swFCQ0hefGqnijtkdWMfVSRdHF5cTcO1LRpGV-dOvPBPTiNrfgkfZ4r7Ci6V4zJ6Z6jidqHHlj7XMxdncII1SsqRX_JklJV7qSgW_Ki_TEli-v6bOggY0okXU2vHS8RRG2vY2DzWslAVKA6UW1t75_qPSEOlBhsybkNDKgpyee9thL5yUTobdGwMt5-NwQYq2InnI1URo1jUotaGVlnKzjrEZkySNTAXhd6T94Q9Ts"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+<span class="font-label text-secondary-container text-xs font-bold uppercase mb-2">Commercial Architecture</span>
+<h3 class="font-headline text-3xl font-bold text-white mb-2">The Meridian Plaza</h3>
+<p class="text-blue-100 mb-6 max-w-lg">A 12-story commercial hub focusing on sustainable materials and open-concept workspace environments in downtown Seattle.</p>
+<a class="flex items-center gap-2 text-white font-bold group/link" href="contact.html">
+                        Case Study <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="p-6 md:hidden">
+<h3 class="font-headline text-xl font-bold text-primary">The Meridian Plaza</h3>
+<p class="text-on-surface-variant text-sm mt-1">Seattle, WA &bull; Commercial</p>
+</div>
+</div>
+<!-- Secondary Item -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest" data-project-card="residential">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury residential modern house exterior with pool and warm internal lighting at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRfIIuYykSorWVHbOOQftpMunt5UNW51OOoR-yq_3HrDPrgsEBdakhfXqMW_Cx7Ri6Wxlr2FnosjHl65KTTiRdtDD1mXqrcHVzm7IAdBa4Ow0VZmCtlcPs1NRcVtiVDYGFtv10c0FyuMP6W3tT2rw2dYEvXs3-nVUA7jBtDZER76dFveUv1B2ZRKsVnFzAdvjOq_5NcO1vmkA43z72a57cXI_PCSgJvxBwALbXG4QFMG-LSsxmnp4BfdAs1ZTxdtKKj66PWHppMOE"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-secondary font-bold text-xs uppercase mb-3">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        Aspen, Colorado
+                    </div>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">Shadow Mountain Villa</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Complete luxury residential build featuring stone-clad exteriors and smart-home integration.</p>
+<a class="text-primary font-bold text-sm hover:underline" href="contact.html">Read More</a>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="renovation">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="contemporary kitchen renovation with white marble countertops and navy blue cabinetry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiN_tbLK8Y1eZwTn_KF5q3g_jFU_nKaKVUPloAnQM0u5V5WHjtO02XSR0CYFuw_xu36DHcH4O-DCne6aZoTP5qf15fzreYTQ6s3_61Oa7uDE0KLLiMKwuH12-qKFjtd7rqr_1ufpmtKGYnvkceZ63dhe21PiErHx-I-s1kkLejcOjjWFGd2EoYHU_0w4j1Q-9js1P3jXVlBMd-QE5gZmrXGhzOykER1THF1Md9Tvwe2Ldi0sQubzyxScdGpiqZhRg1SWb5YTwYGDM"/>
+</div>
+<div class="p-6">
+<span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Renovation</span>
+<h3 class="font-headline text-lg font-bold text-primary">Highland Kitchen Suite</h3>
+<p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Project Scope: Structural &amp; Interior</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="industrial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="construction site with heavy machinery and foundation work in progress at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZdUXiFxLaMO-dtW7S0vqRk-Dg1JaXko02dzAL2LIiMNDKrglB_b5qUmK7_jrbXIoWNui2M5oW1nH5QdFb_R5351EHjux6IWAmEQuRMwEgM1yFOlQtJ4-j-aZ3stbNylc3wTpWmWD5TJ6Qn5smh2K8z51RQgjSRYqvpmXWZYPuIoChnOT13WK_n3-JvPxUyhrEcVzsu_1PpLsjmQW44gsXJNDMG_YWfGWsDFI8gJ6IjKFG8c3V96uKWJrOydhBhUuT3qRtBEsp374"/>
+</div>
+<div class="p-6">
+<span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Industrial</span>
+<h3 class="font-headline text-lg font-bold text-primary">Port Logistics Hub</h3>
+<p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Project Scope: Concrete &amp; Foundation</p>
+</div>
+</div>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="commercial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="modern office lobby with sleek wood paneling and large open workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnNi1iGdKKYwNN_KrAVxZtIvnzkSol0R0LyRvq9BZh_hatIhd7l62aFKtRXxo9WPsVFLMdoEsSOAWVt8vMbRmDnwhAXnm0k_dBQAkCP28xC-_LqFTvCJ0AGll6v3wePE2IwCqYjBx-j73dN_TWjsq6EuMuS1uQno6ilN9KU4wPhDPP7M8BAIExDKfwzo7lS0Q0rSXJ-MPXyvVbQdfYNTj6TBjzxDjHGMzQN9CxZXKR99pxs68lSBbVZcv4uY-Q8h4ApG9BhbeEKK8"/>
+</div>
+<div class="p-6">
+<span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Commercial</span>
+<h3 class="font-headline text-lg font-bold text-primary">NexGen HQ Lobby</h3>
+<p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Project Scope: Interior Build-out</p>
+</div>
+</div>
+<!-- Another Large Shield Item (Asymmetric) -->
+<div class="md:col-span-12 lg:col-span-6 order-last lg:order-none">
+<div class="bg-primary-container p-12 h-full rounded-2xl flex flex-col justify-center text-white">
+<div class="w-16 h-1 bg-secondary mb-8"></div>
+<h2 class="font-headline text-4xl font-bold mb-6">Mastering the Art of Structural Precision</h2>
+<p class="text-on-primary-container text-lg mb-8 leading-relaxed">
+                        Every project in our portfolio represents hundreds of hours of planning, engineering, and craftsmanship. We don't just build structures; we build the foundations for businesses and families to thrive.
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
+<div>
+<p class="text-3xl font-black font-headline text-secondary-container">150+</p>
+<p class="text-sm font-label uppercase tracking-widest opacity-70">Projects Completed</p>
+</div>
+<div>
+<p class="text-3xl font-black font-headline text-secondary-container">25yrs</p>
+<p class="text-sm font-label uppercase tracking-widest opacity-70">Experience</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-12 lg:col-span-6">
+<div class="relative h-full min-h-[320px] md:min-h-[400px] overflow-hidden rounded-2xl">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="architect holding blue prints and pointing at a construction framework on a bright day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIrYo3vZYf6I4nRhPlmbBPkETWjoAcOKS1Pxv5HPKL9LOPJStSrU4dSGlsGaSVLBfUeXhOwYjuwvyPH_Ov1YcH_kqg0lMWhJuQWJhqBgBWYUHDrH10aaK2uKbZEFIFyRZLhqsKUuK3q6PKxON0oMzMCXmILRV1RsHC3-9y42aCx-qhrBg0qpl5rcE5XgrjVj33DFXoIPUpbxImR-cqktF0LDVi-ZK1m14QUqJXVgqy5NjOlUErMqqDNLn7lmZ8L7EmFqYXSrmhZw"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-grayscale-[0.5]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="bg-surface-container-low py-24 px-5 sm:px-8">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline text-4xl md:text-5xl font-black text-primary mb-6 tracking-tight">Have a Project in Mind? Let's Talk.</h2>
+<p class="text-on-surface-variant text-lg mb-10 max-w-2xl mx-auto">
+                From initial blueprint consultation to the final site walkthrough, we bring uncompromising quality to every square foot.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="inline-flex bg-secondary-container text-on-secondary-fixed font-bold px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1" href="contact.html">Start Your Consultation</a>
+<a class="inline-flex bg-white border-2 border-primary text-primary font-bold px-10 py-4 rounded-lg hover:bg-primary hover:text-white transition-all" href="services.html">View Technical Services</a>
+</div>
+</div>
+</section>
+</main>
+<footer data-site-footer></footer>
+</body></html>
+
+
+
+
+
+
+

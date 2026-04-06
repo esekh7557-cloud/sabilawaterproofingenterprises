@@ -1,0 +1,115 @@
+html, body {
+  overflow-x: hidden;
+}
+
+[data-site-header] + main {
+  overflow-x: clip;
+}
+
+@media (max-width: 1024px) {
+  main h1 {
+    font-size: clamp(2.7rem, 7vw, 4.5rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  main h2 {
+    font-size: clamp(1.9rem, 4.8vw, 3rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  main .py-24 {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  main .p-12 {
+    padding: 2rem !important;
+  }
+
+  main .p-10 {
+    padding: 1.75rem !important;
+  }
+
+  main .gap-16 {
+    gap: 2.5rem !important;
+  }
+
+  main .gap-12 {
+    gap: 2rem !important;
+  }
+
+  main .rounded-tl-\[64px\] {
+    border-top-left-radius: 2rem !important;
+  }
+
+  main [class*="px-10"] {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  main h1 {
+    font-size: clamp(2.3rem, 10vw, 3.5rem) !important;
+  }
+
+  main h2 {
+    font-size: clamp(1.75rem, 7vw, 2.35rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  main p,
+  main a,
+  main span {
+    overflow-wrap: anywhere;
+  }
+
+  main .py-24 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  main .p-12 {
+    padding: 1.5rem !important;
+  }
+
+  main .p-10,
+  main .p-8 {
+    padding: 1.25rem !important;
+  }
+
+  main .gap-16,
+  main .gap-12 {
+    gap: 1.5rem !important;
+  }
+
+  main [class*="px-10"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  main .text-lg {
+    font-size: 1rem !important;
+  }
+
+  main .text-xl {
+    font-size: 1.125rem !important;
+  }
+
+  main .max-w-2xl,
+  main .max-w-3xl,
+  main .max-w-4xl {
+    max-width: 100% !important;
+  }
+
+  main .absolute.bottom-6.left-6.right-6 {
+    left: 1rem !important;
+    right: 1rem !important;
+    bottom: 1rem !important;
+  }
+
+  main .w-64.h-64 {
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+}
