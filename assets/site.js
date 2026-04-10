@@ -234,6 +234,74 @@ function setupProjectFilters() {
   });
 }
 
+function setupProjectSlider() {
+  const sliders = Array.from(document.querySelectorAll("[data-project-slider]"));
+  if (!sliders.length) return;
+
+  sliders.forEach((slider) => {
+    const track = slider.querySelector("[data-slider-track]");
+    const prevButton = slider.querySelector("[data-slider-prev]");
+    const nextButton = slider.querySelector("[data-slider-next]");
+    const slides = Array.from(track?.children ?? []);
+    if (!track || !prevButton || !nextButton || !slides.length) return;
+
+    const getStep = () => {
+      const firstSlide = slides[0];
+      if (!firstSlide) return track.clientWidth;
+      const gap = Number.parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || "16");
+      return firstSlide.getBoundingClientRect().width + gap;
+    };
+
+    prevButton.addEventListener("click", () => {
+      track.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+
+    nextButton.addEventListener("click", () => {
+      track.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+  });
+}
+
+function setupProjectLightbox() {
+  const lightbox = document.querySelector("[data-project-lightbox]");
+  const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
+  const closeButton = lightbox?.querySelector("[data-lightbox-close]");
+  const triggerImages = Array.from(document.querySelectorAll("[data-project-slider] .project-slide-figure img"));
+  if (!lightbox || !lightboxImage || !closeButton || !triggerImages.length) return;
+
+  const openLightbox = (image) => {
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || "Project image preview";
+    lightbox.classList.remove("hidden");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("overflow-hidden");
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.add("hidden");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    document.body.classList.remove("overflow-hidden");
+  };
+
+  triggerImages.forEach((image) => {
+    image.addEventListener("click", () => openLightbox(image));
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !lightbox.classList.contains("hidden")) {
+      closeLightbox();
+    }
+  });
+}
+
 function setupContactForm() {
   const form = document.querySelector("[data-contact-form]");
   const successMessage = document.querySelector("[data-contact-success]");
@@ -310,5 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFooter();
   setupFaqs();
   setupProjectFilters();
+  setupProjectSlider();
+  setupProjectLightbox();
   setupContactForm();
 });

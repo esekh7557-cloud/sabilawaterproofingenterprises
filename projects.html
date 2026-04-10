@@ -88,6 +88,236 @@
             border-top-right-radius: 0.5rem;
             border-bottom-right-radius: 0.5rem;
         }
+        .service-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1rem;
+            grid-auto-rows: 230px;
+        }
+        .service-strip-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            border: 5px solid rgba(255, 255, 255, 0.92);
+            background: #edf2f7;
+            box-shadow: 0 10px 30px rgba(15, 75, 132, 0.12);
+        }
+        .project-blue-border {
+            border-color: rgba(0, 52, 98, 0.7);
+            border-width: 1px;
+        }
+        .project-fit-card {
+            background: #efeded;
+        }
+        .project-fit-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #efeded;
+            padding: 0.65rem;
+        }
+        .project-slider-shell {
+            position: relative;
+            border-radius: 1.75rem;
+            border: 1px solid rgba(0, 52, 98, 0.08);
+            background: linear-gradient(180deg, #f7fbff 0%, #edf4fb 100%);
+            box-shadow: 0 20px 45px rgba(15, 75, 132, 0.12);
+            padding: 1.5rem 2.75rem 1rem;
+        }
+        .project-slider-viewport {
+            overflow: hidden;
+        }
+        .project-slider-track {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            padding-bottom: 0.9rem;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0, 52, 98, 0.4) rgba(0, 52, 98, 0.1);
+        }
+        .project-slider-track::-webkit-scrollbar {
+            height: 10px;
+        }
+        .project-slider-track::-webkit-scrollbar-track {
+            background: rgba(0, 52, 98, 0.1);
+            border-radius: 999px;
+        }
+        .project-slider-track::-webkit-scrollbar-thumb {
+            background: rgba(0, 52, 98, 0.4);
+            border-radius: 999px;
+        }
+        .project-slide {
+            flex: 0 0 calc((100% - 2rem) / 3);
+            scroll-snap-align: start;
+        }
+        .project-slide-figure {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            border-radius: 0.2rem;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+        .project-slide-figure img {
+            cursor: zoom-in;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .project-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 80;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: rgba(0, 28, 57, 0.82);
+            backdrop-filter: blur(8px);
+        }
+        .project-lightbox.hidden {
+            display: none;
+        }
+        .project-lightbox-dialog {
+            position: relative;
+            width: min(1100px, 100%);
+            max-height: 92vh;
+            border-radius: 1.25rem;
+            background: #ffffff;
+            box-shadow: 0 20px 48px rgba(0, 28, 57, 0.3);
+            overflow: hidden;
+        }
+        .project-lightbox-close {
+            position: absolute;
+            top: 0.85rem;
+            right: 0.85rem;
+            z-index: 2;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 52, 98, 0.12);
+            background: rgba(255, 255, 255, 0.96);
+            color: #003462;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(15, 75, 132, 0.12);
+        }
+        .project-lightbox-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            max-height: 92vh;
+            padding: 1.25rem;
+            background: linear-gradient(180deg, #f7fbff 0%, #edf4fb 100%);
+        }
+        .project-lightbox-media img {
+            width: 100%;
+            height: 100%;
+            max-height: 82vh;
+            object-fit: contain;
+            display: block;
+        }
+        .project-slider-meta {
+            display: none;
+        }
+        .project-slider-caption {
+            display: none;
+        }
+        .project-slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.96);
+            color: #003462;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(15, 75, 132, 0.12);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            z-index: 2;
+        }
+        .project-slider-button:hover {
+            background: #ffffff;
+            transform: translateY(calc(-50% - 1px));
+        }
+        .project-slider-button[data-slider-prev] {
+            left: 0.6rem;
+        }
+        .project-slider-button[data-slider-next] {
+            right: 0.6rem;
+        }
+        .project-slider-status {
+            display: none;
+        }
+        .service-strip-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .span-1 {
+            grid-column: span 2;
+        }
+        .span-2 {
+            grid-column: span 4;
+        }
+        .span-2-half {
+            grid-column: span 3;
+        }
+        @media (max-width: 640px) {
+            .service-strip-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+            .project-slider-shell {
+                padding: 1rem 1.1rem 1rem;
+            }
+            .project-slide {
+                flex-basis: 82%;
+            }
+            .project-slide-figure {
+                aspect-ratio: 4 / 3;
+            }
+            .project-lightbox {
+                padding: 0.75rem;
+            }
+            .project-lightbox-media {
+                min-height: 58vh;
+                padding: 0.75rem;
+            }
+            .project-slider-button {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            .project-slider-button[data-slider-prev] {
+                left: 0.3rem;
+            }
+            .project-slider-button[data-slider-next] {
+                right: 0.3rem;
+            }
+            .span-1,
+            .span-2,
+            .span-2-half {
+                grid-column: auto;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 1023px) {
+            .project-slide {
+                flex-basis: calc((100% - 1rem) / 2);
+            }
+        }
     </style>
 <script defer src="assets/site.js"></script>
 <link href="assets/responsive.css" rel="stylesheet"/>
@@ -106,7 +336,7 @@
                 Protected to <span class="text-secondary">Last</span>,<br/>Treated With Care.
             </h1>
 <p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-                A collection of waterproofing, crack filling, grouting, and protective coating work completed for residential and commercial spaces.
+                A collection of waterproofing, crack filling, grouting, and protective coating work completed for residential and commercial spaces, with every gallery image numbered for easy reference.
             </p>
 <div class="flex flex-wrap gap-4">
 <a class="inline-flex bg-primary text-on-primary px-5 sm:px-8 py-4 rounded-lg font-headline font-bold text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all" href="contact.html">Start Your Waterproofing Work</a>
@@ -117,7 +347,7 @@
 <div class="absolute -inset-6 rounded-[2rem] bg-primary-fixed/70"></div>
 <div class="absolute -right-6 -top-6 h-28 w-28 rounded-2xl bg-secondary-container/90"></div>
 <article class="relative overflow-hidden rounded-[2rem] border-[10px] border-white bg-white shadow-2xl">
-<img class="h-[440px] w-full object-cover" alt="Completed Sabila waterproofing project" src="web%20images/projects/rs=w_2480,h_1240,cg_true.webp"/>
+<img class="h-[440px] w-full object-cover" alt="Completed Sabila waterproofing project at Eternia Villas" src="web%20images/projects/eternia%20villas.webp"/>
 <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent p-8 pt-28">
 <span class="font-label text-xs font-bold uppercase tracking-[0.22em] text-secondary-container">Featured Work</span>
 <h2 class="mt-3 font-headline text-3xl font-black text-white">Waterproofing Work Portfolio</h2>
@@ -127,16 +357,8 @@
 </div>
 </div>
 </section>
-<!-- Category Filters -->
 <section class="px-5 sm:px-8 pb-12 max-w-7xl mx-auto">
-<div class="flex flex-wrap gap-4 items-center">
-<span class="font-label text-xs font-bold text-on-surface-variant uppercase tracking-widest mr-2">Filter by:</span>
-<button class="px-6 py-2 rounded-full bg-primary text-white font-semibold text-sm transition-all shadow-md" type="button" data-filter-button="all">All Work</button>
-<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="residential">Residential</button>
-<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="commercial">Commercial</button>
-<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="coating">Coatings</button>
-<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-all" type="button" data-filter-button="industrial">Waterproofing</button>
-</div>
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary tracking-tight">Completed Projects</h2>
 </section>
 <!-- Project Gallery - Bento Grid -->
 <section class="px-5 sm:px-8 py-12 max-w-7xl mx-auto">
@@ -144,40 +366,40 @@
 <!-- Large Featured Item -->
 <div class="md:col-span-8 group relative overflow-hidden project-shield bg-surface-container-lowest" data-project-card="commercial">
 <div class="aspect-[16/9] overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="commercial waterproofing project site after treatment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBjtOSST0Z340rzK2Jv8B3Nxle2p8OIUlR-swFCQ0hefGqnijtkdWMfVSRdHF5cTcO1LRpGV-dOvPBPTiNrfgkfZ4r7Ci6V4zJ6Z6jidqHHlj7XMxdncII1SsqRX_JklJV7qSgW_Ki_TEli-v6bOggY0okXU2vHS8RRG2vY2DzWslAVKA6UW1t75_qPSEOlBhsybkNDKgpyee9thL5yUTobdGwMt5-NwQYq2InnI1URo1jUotaGVlnKzjrEZkySNTAXhd6T94Q9Ts"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Waterproofing of a residential building in Vasco Da Gama, Goa" src="web%20images/projects/urbanscape.webp"/>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-<span class="font-label text-secondary-container text-xs font-bold uppercase mb-2">Commercial Waterproofing</span>
-<h3 class="font-headline text-3xl font-bold text-white mb-2">Commercial Terrace Treatment</h3>
-<p class="text-blue-100 mb-6 max-w-lg">A commercial waterproofing treatment focused on surface preparation, water resistance, and long-term protection.</p>
+<span class="font-label text-secondary-container text-xs font-bold uppercase mb-2">Residential Waterproofing</span>
+<h3 class="font-headline text-3xl font-bold text-white mb-2">Vasco Da Gama Residential Building</h3>
+<p class="text-blue-100 mb-6 max-w-lg">Waterproofing of a residential building in Vasco Da Gama, Goa, was successfully completed using quality materials and expert techniques, ensuring durable, leak-proof protection with warranty.</p>
 <a class="flex items-center gap-2 text-white font-bold group/link" href="contact.html">
                         Enquire Now <span class="material-symbols-outlined text-lg group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
 </a>
 </div>
 <div class="p-6 md:hidden">
-<h3 class="font-headline text-xl font-bold text-primary">Commercial Terrace Treatment</h3>
-<p class="text-on-surface-variant text-sm mt-1">Goa &bull; Commercial Waterproofing</p>
+<h3 class="font-headline text-xl font-bold text-primary">Vasco Da Gama Residential Building</h3>
+<p class="text-on-surface-variant text-sm mt-1">Goa &bull; Sabila Waterproofing Enterprises</p>
 </div>
 </div>
 <!-- Secondary Item -->
 <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest" data-project-card="residential">
 <div class="aspect-square overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="luxury residential modern house exterior with pool and warm internal lighting at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRfIIuYykSorWVHbOOQftpMunt5UNW51OOoR-yq_3HrDPrgsEBdakhfXqMW_Cx7Ri6Wxlr2FnosjHl65KTTiRdtDD1mXqrcHVzm7IAdBa4Ow0VZmCtlcPs1NRcVtiVDYGFtv10c0FyuMP6W3tT2rw2dYEvXs3-nVUA7jBtDZER76dFveUv1B2ZRKsVnFzAdvjOq_5NcO1vmkA43z72a57cXI_PCSgJvxBwALbXG4QFMG-LSsxmnp4BfdAs1ZTxdtKKj66PWHppMOE"/>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="W Goa Anjuna injection cement grouting project reference" src="web%20images/projects/w%20goa.webp"/>
 </div>
 <div class="p-6">
 <div class="flex items-center gap-2 text-secondary font-bold text-xs uppercase mb-3">
 <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
-                        North Goa
+                        Anjuna, Goa
                     </div>
-<h3 class="font-headline text-xl font-bold text-primary mb-2">Residential Terrace Waterproofing</h3>
-<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Waterproofing treatment for residential surfaces to help prevent leakage and moisture damage.</p>
+<h3 class="font-headline text-xl font-bold text-primary mb-2">W Goa Anjuna - Injection Cement Grouting</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4">Injection PU Grouting. Scope: Injection Grouting.</p>
 <a class="text-primary font-bold text-sm hover:underline" href="contact.html">Enquire Now</a>
 </div>
 </div>
 <!-- Small Grid Items -->
 <div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="coating">
 <div class="aspect-video overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="surface coating and waterproofing treatment work" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiN_tbLK8Y1eZwTn_KF5q3g_jFU_nKaKVUPloAnQM0u5V5WHjtO02XSR0CYFuw_xu36DHcH4O-DCne6aZoTP5qf15fzreYTQ6s3_61Oa7uDE0KLLiMKwuH12-qKFjtd7rqr_1ufpmtKGYnvkceZ63dhe21PiErHx-I-s1kkLejcOjjWFGd2EoYHU_0w4j1Q-9js1P3jXVlBMd-QE5gZmrXGhzOykER1THF1Md9Tvwe2Ldi0sQubzyxScdGpiqZhRg1SWb5YTwYGDM"/>
+<img class="w-full h-full object-cover" data-alt="Tree Hotel project reference" src="web%20images/projects/tree%20hotel.webp"/>
 </div>
 <div class="p-6">
 <span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Coating</span>
@@ -185,7 +407,7 @@
 <p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Scope: Surface Preparation &amp; Coating</p>
 </div>
 </div>
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="industrial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="foundation crack filling and waterproofing work in progress" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZdUXiFxLaMO-dtW7S0vqRk-Dg1JaXko02dzAL2LIiMNDKrglB_b5qUmK7_jrbXIoWNui2M5oW1nH5QdFb_R5351EHjux6IWAmEQuRMwEgM1yFOlQtJ4-j-aZ3stbNylc3wTpWmWD5TJ6Qn5smh2K8z51RQgjSRYqvpmXWZYPuIoChnOT13WK_n3-JvPxUyhrEcVzsu_1PpLsjmQW44gsXJNDMG_YWfGWsDFI8gJ6IjKFG8c3V96uKWJrOydhBhUuT3qRtBEsp374"/>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="industrial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="Novotel project reference" src="web%20images/projects/novotel.webp"/>
 </div>
 <div class="p-6">
 <span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Waterproofing</span>
@@ -193,7 +415,7 @@
 <p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Scope: Crack Filling &amp; Grouting</p>
 </div>
 </div>
-<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="commercial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="modern office lobby with sleek wood paneling and large open workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnNi1iGdKKYwNN_KrAVxZtIvnzkSol0R0LyRvq9BZh_hatIhd7l62aFKtRXxo9WPsVFLMdoEsSOAWVt8vMbRmDnwhAXnm0k_dBQAkCP28xC-_LqFTvCJ0AGll6v3wePE2IwCqYjBx-j73dN_TWjsq6EuMuS1uQno6ilN9KU4wPhDPP7M8BAIExDKfwzo7lS0Q0rSXJ-MPXyvVbQdfYNTj6TBjzxDjHGMzQN9CxZXKR99pxs68lSBbVZcv4uY-Q8h4ApG9BhbeEKK8"/>
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border-none" data-project-card="commercial"><div class="aspect-video overflow-hidden"><img class="w-full h-full object-cover" data-alt="Dalmiya House project reference" src="web%20images/projects/Dalmiya%20house.webp"/>
 </div>
 <div class="p-6">
 <span class="font-label text-xs font-bold text-secondary-fixed-dim bg-secondary/10 px-2 py-1 rounded mb-4 inline-block">Commercial</span>
@@ -201,30 +423,219 @@
 <p class="text-on-surface-variant text-xs mt-2 uppercase tracking-tight font-semibold">Scope: Injection Grouting</p>
 </div>
 </div>
-<!-- Another Large Shield Item (Asymmetric) -->
-<div class="md:col-span-12 lg:col-span-6 order-last lg:order-none">
-<div class="bg-primary-container p-12 h-full rounded-2xl flex flex-col justify-center text-white">
-<div class="w-16 h-1 bg-secondary mb-8"></div>
-<h2 class="font-headline text-4xl font-bold mb-6">Mastering the Art of Waterproofing Protection</h2>
-<p class="text-on-primary-container text-lg mb-8 leading-relaxed">
-                        Every site in our portfolio represents careful inspection, product selection, preparation, and application. We help protect homes and businesses from leakage, seepage, and surface damage.
-                    </p>
-<div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-<div>
-<p class="text-3xl font-black font-headline text-secondary-container">150+</p>
-<p class="text-sm font-label uppercase tracking-widest opacity-70">Sites Treated</p>
 </div>
-<div>
-<p class="text-3xl font-black font-headline text-secondary-container">25yrs</p>
-<p class="text-sm font-label uppercase tracking-widest opacity-70">Experience</p>
+</section>
+<!-- Project Write-Up Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-10 tracking-tight">Projects</h2>
+<div class="space-y-8">
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<img alt="Chandradeep Shastrikar Porvorim project reference" loading="lazy" src="web%20images/projects/chandradeep%20shastrikar%20porvorim.webp"/>
+</div>
+<div class="p-8 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Arch. Chandradeep Shastrikar Porvorim</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Completed a luxurious bungalow at Penha De Franca, Porvorim, Goa, 403521. This bungalow is the embodiment of luxury, featuring high-end materials and finishes that make it truly one of a kind.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Throughout the project, only the finest materials and the most skilled craftsmen were used to ensure every detail was perfect. From Italian marble flooring to custom-built teakwood cabinets, every element was selected to create a luxurious and inviting living space.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The bungalow includes spacious living areas, gourmet kitchens, and luxurious bedrooms and bathrooms. High ceilings and large windows bring in natural light, while custom lighting fixtures create a warm and inviting ambiance.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Outside, the bungalow features a landscaped garden and a private swimming pool, along with an outdoor entertaining area for dining, lounging, and enjoying the Goa weather. Sabila Waterproofing Enterprises is proud of this project as a strong example of luxury living in Goa.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<img alt="Dalmiya House project reference" loading="lazy" src="web%20images/projects/Dalmiya%20house.webp"/>
+</div>
+<div class="p-8 md:order-1 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Dalmiya House Margao - Injection Cement Grouting</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Injection grouting is the method of filling cracks, open joints, voids, or honeycombs in concrete or masonry structural members. This is done under pressure with a grout material that cures in place to strengthen the structure and prevent water ingress.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Grout is a flowable plastic material and should have negligible shrinkage so it can fully fill gaps and voids while remaining stable without cracking, delamination, or crumbling. This project reflects the dependable execution standards of Sabila Waterproofing Enterprises.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<img alt="Eternia Villas project reference 2" loading="lazy" src="web%20images/projects/eternia%20villas%20(2).webp"/>
+</div>
+<div class="p-8 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Villa 7 Terrace Waterproofing</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Terrace Waterproofing Project at Reis Magos, Verem.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">A comprehensive terrace waterproofing project was completed with careful planning and execution to ensure the terrace is fully protected from water seepage and damage, improving the durability and longevity of the structure.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">High-quality materials and advanced waterproofing techniques were used, including surface preparation, application of waterproof coatings, and final finishing for a seamless and visually clean result.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The outcome is a fully waterproofed terrace that can withstand heavy rain and humid weather conditions, giving the property owners peace of mind and long-term protection.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<img alt="Eternia Villas project reference" loading="lazy" src="web%20images/projects/eternia%20villas.webp"/>
+</div>
+<div class="p-8 md:order-1 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Villa 7 Swimming Waterproofing</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Swimming Pool Waterproofing Project at Reis Magos, Verem.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">This project focused on keeping the swimming pool completely leak-proof and improving its performance and longevity. Advanced waterproofing solutions and high-quality materials were used to address seepage issues and prevent structural damage.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The process included thorough surface preparation, specialized waterproof coatings, and precise sealing of joints for strong and durable performance.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The final result is a properly waterproofed swimming pool that is ready to withstand water pressure and changing weather conditions while offering a safe and enjoyable experience.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<img alt="Ginger project reference" loading="lazy" src="web%20images/projects/ginger.webp"/>
+</div>
+<div class="p-8 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Ginger Hotel, Panjim</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">A team of expert professionals completed the toilet waterproofing work at Panjim with excellent attention to detail and reliable workmanship.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Top-quality waterproofing membranes were used to protect vulnerable areas from water damage, resulting in a functional and visually appealing toilet that will remain protected for many years.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The work reflects a strong commitment to proper building maintenance and the high level of service delivered by Sabila Waterproofing Enterprises.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<img alt="Iconia project reference" loading="lazy" src="web%20images/projects/iconia.webp"/>
+</div>
+<div class="p-8 md:order-1 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Iconia Vasco Da Gama Dabolim</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">The team completed the toilet and balcony work at Vasco da Gama, Goa with excellence and efficiency.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The toilet was upgraded with new tiles to create a stylish and hygienic environment, and the work was carried out respectfully and professionally with minimal inconvenience to the residents.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The final result is a practical and attractive toilet and balcony that improve the quality, comfort, and finish of the property.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<img alt="Novotel project reference" loading="lazy" src="web%20images/projects/novotel.webp"/>
+</div>
+<div class="p-8 md:order-1 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Novotel Hotel 5 Star - Injection PU Grouting</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Injection PU grouting work completed at Candolim, Goa.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">A team of skilled professionals from Sabila Waterproofing Enterprises successfully completed a challenging injection PU grouting project by injecting polyurethane resin into cracks and voids in concrete structures to seal them and prevent water leakage.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Advanced equipment and methods such as high-pressure pumps, injection packers, and non-shrinkable grout were used to ensure quality and safety throughout the work.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The completed work improved structural durability and strength while restoring the appearance of the treated areas. The client appreciated the workmanship, professionalism, and dedication of the team.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<img alt="Regina project reference" loading="lazy" src="web%20images/projects/regina.webp"/>
+</div>
+<div class="p-8 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Mohidin's Regina Vasco Da Gama</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">The completed toilet waterproofing work at Vasco da Gama was carried out by a team of experts who delivered an outstanding result.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">They paid close attention to every detail and used high-quality waterproofing membranes to prevent water damage in vulnerable areas.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">The final outcome is a functional, aesthetically pleasing, and well-protected toilet that is built to last for many years. The team's commitment to proper building maintenance and service quality is evident throughout the work.</p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<img alt="The Westin Goa project reference" loading="lazy" src="web%20images/projects/the%20westin%20goa.webp"/>
+</div>
+<div class="p-8 md:order-1 flex flex-col justify-center min-h-[320px]">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">The Westin Goa, Anjuna</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">At The Westin Goa, Anjuna, comprehensive injection grouting and waterproofing solutions were implemented to reinforce the structure against heavy rainfall, high humidity, and saline air.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Specialized polyurethane and epoxy grouts were injected under pressure to fill structural cracks, joints, and cavities. This provided effective sealing and prevented water ingress in basements, swimming pool structures, and key service areas.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Premium protective coatings were also applied to safeguard both exterior and interior surfaces. UV-resistant elastomeric coatings protected exterior walls, antimicrobial coatings supported hygienic interior spaces, and epoxy coatings added chemical and abrasion resistance in kitchens and utility areas.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">These advanced waterproofing and coating systems help The Westin Goa maintain long-term structural protection while preserving its luxury finish and aesthetic excellence.</p>
+</div>
+</article>
 </div>
 </div>
 </div>
+</section>
+<!-- Infinity Bay Photo Gallery -->
+<section class="py-24 bg-primary-fixed-dim">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-2xl md:text-3xl font-bold font-body text-primary mb-10 tracking-tight">INfinity Bay Photo Gallery</h2>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinity Bay project reference 2" loading="lazy" src="web%20images/projects/infinity%20bay%202.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinity Bay project reference 3" loading="lazy" src="web%20images/projects/infinity%20bay%203.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinity Bay project reference 5" loading="lazy" src="web%20images/projects/infinity%20bay%205.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinity Bay project reference 6" loading="lazy" src="web%20images/projects/infinity%20bay%206.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinity Bay project reference" loading="lazy" src="web%20images/projects/infinity%20bay.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Infinty Bay project reference" loading="lazy" src="web%20images/projects/infinty%20bay.webp"/></div></div>
 </div>
-<div class="md:col-span-12 lg:col-span-6">
-<div class="relative h-full min-h-[320px] md:min-h-[400px] overflow-hidden rounded-2xl">
-<img class="absolute inset-0 w-full h-full object-cover" data-alt="waterproofing specialist reviewing site treatment details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrIrYo3vZYf6I4nRhPlmbBPkETWjoAcOKS1Pxv5HPKL9LOPJStSrU4dSGlsGaSVLBfUeXhOwYjuwvyPH_Ov1YcH_kqg0lMWhJuQWJhqBgBWYUHDrH10aaK2uKbZEFIFyRZLhqsKUuK3q6PKxON0oMzMCXmILRV1RsHC3-9y42aCx-qhrBg0qpl5rcE5XgrjVj33DFXoIPUpbxImR-cqktF0LDVi-ZK1m14QUqJXVgqy5NjOlUErMqqDNLn7lmZ8L7EmFqYXSrmhZw"/>
-<div class="absolute inset-0 bg-primary/20 backdrop-grayscale-[0.5]"></div>
+</div>
+</div>
+</section>
+<!-- Brick Bat Coba Waterproofing -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-2xl md:text-3xl font-bold font-body text-primary mb-10 tracking-tight">Brick bat Coba waterproofing</h2>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Golden Tulip project reference 2" loading="lazy" src="web%20images/projects/golden%20tulip%202.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Golden Tulip project reference 3" loading="lazy" src="web%20images/projects/golden%20tulip%203.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Golden Tulip project reference 4" loading="lazy" src="web%20images/projects/golden%20tulip%204.webp"/></div></div>
+<div class="service-strip-card project-blue-border"><div class="aspect-[4/3]"><img alt="Golden Tulip project reference" loading="lazy" src="web%20images/projects/golden%20tulip.webp"/></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mount Litera Zee School, Goa -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-2xl md:text-3xl font-bold font-body text-primary mb-10 tracking-tight">Mount Litera Zee School, Goa</h2>
+<article class="overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none">
+<img alt="Mount Litera Zee School project reference 3" class="w-full h-auto object-contain bg-surface-container" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school%20(3).webp"/>
+</div>
+<div class="p-8">
+<p class="text-on-surface-variant text-lg leading-relaxed">At Mount Litera Zee School, we are dedicated to providing the best facilities for our students, and our ongoing swimming pool waterproofing project is a testament to this commitment.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">We are currently undertaking comprehensive waterproofing measures to ensure the longevity and safety of our pool. This process involves meticulous surface preparation, the application of high-quality, eco-friendly waterproofing coatings in multiple layers, and thorough sealing of all joints and edges.</p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">Our expert team is diligently working to ensure every aspect of the pool is protected against water infiltration, thereby preventing potential structural damage and ensuring a hygienic environment.</p>
+</div>
+</article>
+<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="service-strip-card project-blue-border project-fit-card"><div class="h-[320px] md:h-[360px]"><img alt="Mount Litera Zee School project reference 2" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school%20(2).webp"/></div></div>
+<div class="service-strip-card project-blue-border project-fit-card"><div class="h-[320px] md:h-[360px]"><img alt="Mount Litera Zee School project reference" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school.webp"/></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Gallery -->
+<section class="py-24 bg-surface project-reference-gallery">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-3xl">
+<h2 class="mt-4 text-4xl md:text-5xl font-black font-headline text-primary tracking-tight">Project Gallery</h2>
+</div>
+<div class="mt-12" data-project-slider>
+<div class="project-slider-shell">
+<div class="project-slider-viewport">
+<div class="project-slider-track" data-slider-track>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Project reference image 1" loading="lazy" src="web%20images/projects/1.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Project reference image 1</p><p class="project-slider-status">1 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Project reference image 2" loading="lazy" src="web%20images/projects/2.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Project reference image 2</p><p class="project-slider-status">2 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Project reference image 3" loading="lazy" src="web%20images/projects/3.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Project reference image 3</p><p class="project-slider-status">3 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Project reference image 4" loading="lazy" src="web%20images/projects/4.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Project reference image 4</p><p class="project-slider-status">4 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Achievement certificate project reference 1" loading="lazy" src="web%20images/projects/achivements%201.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Achievement certificate project reference 1</p><p class="project-slider-status">5 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Achievement certificate project reference 2" loading="lazy" src="web%20images/projects/achivements%202.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Achievement certificate project reference 2</p><p class="project-slider-status">6 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Chandradeep Shastrikar Porvorim project reference" loading="lazy" src="web%20images/projects/chandradeep%20shastrikar%20porvorim.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Chandradeep Shastrikar Porvorim project reference</p><p class="project-slider-status">7 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Dalmiya House project reference" loading="lazy" src="web%20images/projects/Dalmiya%20house.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Dalmiya House project reference</p><p class="project-slider-status">8 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Eternia Villas project reference 2" loading="lazy" src="web%20images/projects/eternia%20villas%20(2).webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Eternia Villas project reference 2</p><p class="project-slider-status">9 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Eternia Villas project reference" loading="lazy" src="web%20images/projects/eternia%20villas.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Eternia Villas project reference</p><p class="project-slider-status">10 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Ginger project reference" loading="lazy" src="web%20images/projects/ginger.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Ginger project reference</p><p class="project-slider-status">11 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Golden Tulip project reference 2" loading="lazy" src="web%20images/projects/golden%20tulip%202.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Golden Tulip project reference 2</p><p class="project-slider-status">12 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Golden Tulip project reference 3" loading="lazy" src="web%20images/projects/golden%20tulip%203.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Golden Tulip project reference 3</p><p class="project-slider-status">13 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Golden Tulip project reference 4" loading="lazy" src="web%20images/projects/golden%20tulip%204.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Golden Tulip project reference 4</p><p class="project-slider-status">14 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Golden Tulip project reference 5" loading="lazy" src="web%20images/projects/golden%20tulip%205.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Golden Tulip project reference 5</p><p class="project-slider-status">15 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Golden Tulip project reference" loading="lazy" src="web%20images/projects/golden%20tulip.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Golden Tulip project reference</p><p class="project-slider-status">16 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Iconia project reference" loading="lazy" src="web%20images/projects/iconia.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Iconia project reference</p><p class="project-slider-status">17 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinity Bay project reference 2" loading="lazy" src="web%20images/projects/infinity%20bay%202.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinity Bay project reference 2</p><p class="project-slider-status">18 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinity Bay project reference 3" loading="lazy" src="web%20images/projects/infinity%20bay%203.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinity Bay project reference 3</p><p class="project-slider-status">19 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinity Bay project reference 5" loading="lazy" src="web%20images/projects/infinity%20bay%205.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinity Bay project reference 5</p><p class="project-slider-status">20 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinity Bay project reference 6" loading="lazy" src="web%20images/projects/infinity%20bay%206.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinity Bay project reference 6</p><p class="project-slider-status">21 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinity Bay project reference" loading="lazy" src="web%20images/projects/infinity%20bay.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinity Bay project reference</p><p class="project-slider-status">22 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Infinty Bay project reference" loading="lazy" src="web%20images/projects/infinty%20bay.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Infinty Bay project reference</p><p class="project-slider-status">23 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Mount Litera Zee School project reference 2" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school%20(2).webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Mount Litera Zee School project reference 2</p><p class="project-slider-status">24 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Mount Litera Zee School project reference 3" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school%20(3).webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Mount Litera Zee School project reference 3</p><p class="project-slider-status">25 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Mount Litera Zee School project reference" loading="lazy" src="web%20images/projects/mount%20litera%20zee%20school.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Mount Litera Zee School project reference</p><p class="project-slider-status">26 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Novotel project reference" loading="lazy" src="web%20images/projects/novotel.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Novotel project reference</p><p class="project-slider-status">27 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Regina project reference" loading="lazy" src="web%20images/projects/regina.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Regina project reference</p><p class="project-slider-status">28 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="The Westin Goa project reference" loading="lazy" src="web%20images/projects/the%20westin%20goa.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">The Westin Goa project reference</p><p class="project-slider-status">29 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Tree Hotel project reference" loading="lazy" src="web%20images/projects/tree%20hotel.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Tree Hotel project reference</p><p class="project-slider-status">30 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="Urbanscape project reference" loading="lazy" src="web%20images/projects/urbanscape.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">Urbanscape project reference</p><p class="project-slider-status">31 / 32</p></div></article>
+<article class="project-slide"><div class="project-slide-figure"><img alt="W Goa project reference" loading="lazy" src="web%20images/projects/w%20goa.webp"/></div><div class="project-slider-meta"><p class="project-slider-caption">W Goa project reference</p><p class="project-slider-status">32 / 32</p></div></article>
+</div>
+</div>
+<button aria-label="Previous project image" class="project-slider-button" data-slider-prev type="button"><span class="material-symbols-outlined">arrow_back</span></button>
+<button aria-label="Next project image" class="project-slider-button" data-slider-next type="button"><span class="material-symbols-outlined">arrow_forward</span></button>
 </div>
 </div>
 </div>
@@ -243,12 +654,13 @@
 </div>
 </section>
 </main>
+<div aria-hidden="true" class="project-lightbox hidden" data-project-lightbox>
+<div class="project-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Project image preview">
+<button aria-label="Close image preview" class="project-lightbox-close" data-lightbox-close type="button"><span class="material-symbols-outlined">close</span></button>
+<div class="project-lightbox-media">
+<img alt="" data-lightbox-image src=""/>
+</div>
+</div>
+</div>
 <footer data-site-footer></footer>
 </body></html>
-
-
-
-
-
-
-
