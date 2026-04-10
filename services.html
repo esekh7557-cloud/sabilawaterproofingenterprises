@@ -3,7 +3,8 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services | SWE Construction &amp; Home Services</title>
+<link href="web%20images/logo/logo%20sabila%20waterproofing.jpeg" rel="icon" type="image/jpeg"/>
+<title>Services | Sabila Waterproofing Enterprises</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -87,6 +88,149 @@
             border-top-right-radius: 0.5rem;
             border-left: 4px solid #745b00;
         }
+        .service-mosaic-frame {
+            background: linear-gradient(135deg, #2d609a 0%, #5a71c7 48%, #8c5fff 100%);
+            border-radius: 1.5rem;
+            padding: 1rem;
+            box-shadow: 0 18px 40px rgba(15, 75, 132, 0.16);
+        }
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+            gap: 0.7rem;
+            aspect-ratio: 1.68 / 1;
+        }
+        .service-tile {
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 5px solid rgba(255, 255, 255, 0.92);
+            background: #edf2f7;
+            box-shadow: inset 0 0 0 1px rgba(0, 28, 57, 0.08);
+        }
+        .service-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .service-strip-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 1rem;
+            grid-auto-rows: 230px;
+        }
+        .service-strip-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            border: 5px solid rgba(255, 255, 255, 0.92);
+            background: #edf2f7;
+            box-shadow: 0 10px 30px rgba(15, 75, 132, 0.12);
+        }
+        .service-strip-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .span-1 {
+            grid-column: span 2;
+        }
+        .span-2 {
+            grid-column: span 4;
+        }
+        .span-2-half {
+            grid-column: span 3;
+        }
+        .span-full {
+            grid-column: span 6;
+        }
+        .service-image-index {
+            position: absolute;
+            top: 0.9rem;
+            right: 0.9rem;
+            z-index: 2;
+            min-width: 2.35rem;
+            height: 2.35rem;
+            padding: 0 0.55rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.95);
+            color: #003462;
+            font-family: "Work Sans", sans-serif;
+            font-size: 0.95rem;
+            font-weight: 900;
+            box-shadow: 0 10px 24px rgba(0, 28, 57, 0.16);
+        }
+        .service-gallery .tile-1 {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
+        }
+        .service-gallery .tile-2 {
+            grid-column: 4;
+            grid-row: 1;
+        }
+        .service-gallery .tile-3 {
+            grid-column: 4;
+            grid-row: 2;
+        }
+        .service-gallery .tile-4 {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+        .service-gallery .tile-5 {
+            grid-column: 3 / span 2;
+            grid-row: 3;
+        }
+        @media (max-width: 640px) {
+            .service-mosaic-frame {
+                padding: 0.75rem;
+                border-radius: 1.25rem;
+            }
+            .service-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: auto;
+                aspect-ratio: auto;
+            }
+            .service-gallery .tile-1,
+            .service-gallery .tile-2,
+            .service-gallery .tile-3,
+            .service-gallery .tile-4,
+            .service-gallery .tile-5 {
+                grid-column: auto;
+                grid-row: auto;
+                min-height: 150px;
+            }
+            .service-gallery .tile-1 {
+                grid-column: 1 / -1;
+                min-height: 260px;
+            }
+            .service-strip-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+            .span-1,
+            .span-2,
+            .span-2-half,
+            .span-full {
+                grid-column: auto;
+            }
+            .service-tile {
+                border-width: 4px;
+                border-radius: 0.65rem;
+            }
+            .service-strip-card {
+                border-width: 4px;
+                border-radius: 1rem;
+            }
+            .service-image-index {
+                top: 0.7rem;
+                right: 0.7rem;
+            }
+        }
     </style>
 <script defer src="assets/site.js"></script>
 <link href="assets/responsive.css" rel="stylesheet"/>
@@ -98,191 +242,285 @@
 <section class="relative min-h-[520px] md:h-[614px] flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
 <div class="absolute inset-0 bg-gradient-to-r from-[#001c39]/85 via-[#001c39]/60 to-[#001c39]/30"></div>
-<img class="w-full h-full object-cover" data-alt="professional construction site with architectural blueprints and high-end tools in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOBVkIF52yvhD1WnJyA5XfGhRsTxsrvXXs07WsEadLAZB4bhbzO7WkwCkM8nhXC_wXU833qQLLGDln4JqoSy85Y3OGOb5tcNs4pdq2YPpPDxs4qwk8kTQDvpsJp5TMk7Wq3f6-W_firHCdCJTGyZHMKKCNO42mvjIn3r5CznuluuCf-SpV9yMNa37h2vq7_Fkx7K35OFGhlZXRujAICBKeKF8-jVwSusb0kiHforMtWw_nQ3AlWrO8JqH6JK7GyrHtsmP9-pS9bZY"/>
+<img class="w-full h-full object-cover object-center" alt="Services hero image" src="web%20images/services/Brick%20Bat%20Coba.webp"/>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full">
 <div class="max-w-2xl">
 <span class="text-secondary-container font-label tracking-widest font-bold block mb-4 uppercase">Expert Solutions</span>
 <h1 class="text-5xl md:text-7xl font-black text-white font-headline leading-tight mb-6 tracking-tighter">
-                        Building the <br/><span class="text-secondary-container">Future</span> Today.
+                        Protecting Your <br/><span class="text-secondary-container">Spaces</span> Today.
                     </h1>
 <p class="text-blue-100 text-lg md:text-xl font-medium max-w-lg">
-                        Precision-engineered services for residential and commercial spaces, delivered with architectural integrity and industrial strength.
+                        Specialized waterproofing, grouting, coating, and leakage-control services for residential and commercial spaces.
                     </p>
 </div>
 </div>
 </section>
-<!-- Services Grid -->
-<section class="py-24 bg-surface">
-<div class="max-w-7xl mx-auto px-5 sm:px-8">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-2xl">
-<h2 class="text-4xl font-black font-headline text-primary mb-4 tracking-tight">Our Core Services</h2>
-<div class="h-1 w-24 bg-secondary mb-6"></div>
-<p class="text-on-surface-variant text-lg leading-relaxed">
-                            We provide a comprehensive suite of construction and home maintenance solutions tailored to the highest standards of safety and aesthetic excellence.
-                        </p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- Residential Construction -->
-<div class="group bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
-<div class="flex items-start justify-between mb-8">
-<div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="architecture">architecture</span>
-</div>
-<span class="text-surface-container-highest font-black text-4xl opacity-50">01</span>
-</div>
-<h3 class="text-2xl font-bold font-headline text-primary mb-4">Residential Construction</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">
-                            From initial drafting to the final brick, we specialize in high-end residential builds that combine modern architectural trends with timeless structural integrity. Our team manages every phase of the project cycle.
-                        </p>
-<ul class="space-y-3 mb-10">
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Custom Home Design &amp; Drafting
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Structural Engineering &amp; Permits
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Project Management &amp; Supervision
-                            </li>
-</ul>
-<a class="inline-flex w-full items-center justify-center py-4 bg-primary text-on-primary rounded-lg font-bold hover:bg-primary-container transition-colors" href="contact.html">Book a Service</a>
-</div>
-<!-- Interior Design & Renovations -->
-<div class="group bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
-<div class="flex items-start justify-between mb-8">
-<div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="format_paint">format_paint</span>
-</div>
-<span class="text-surface-container-highest font-black text-4xl opacity-50">02</span>
-</div>
-<h3 class="text-2xl font-bold font-headline text-primary mb-4">Interior Design &amp; Renovations</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">
-                            Transforming existing spaces into functional masterpieces. We focus on ergonomic layouts, premium materials, and aesthetic cohesion that reflects your personal brand and lifestyle needs.
-                        </p>
-<ul class="space-y-3 mb-10">
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Kitchen &amp; Bathroom Remodeling
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Space Optimization &amp; Layouts
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Premium Material Selection
-                            </li>
-</ul>
-<a class="inline-flex w-full items-center justify-center py-4 bg-primary text-on-primary rounded-lg font-bold hover:bg-primary-container transition-colors" href="contact.html">Book a Service</a>
-</div>
-<!-- Home Maintenance & Repairs -->
-<div class="group bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
-<div class="flex items-start justify-between mb-8">
-<div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="home_repair_service">home_repair_service</span>
-</div>
-<span class="text-surface-container-highest font-black text-4xl opacity-50">03</span>
-</div>
-<h3 class="text-2xl font-bold font-headline text-primary mb-4">Home Maintenance &amp; Repairs</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">
-                            Proactive care for your most valuable asset. Our maintenance programs ensure your home stays in peak condition, preventing costly repairs through expert inspections and precision fixes.
-                        </p>
-<ul class="space-y-3 mb-10">
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Scheduled Property Inspections
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Roofing &amp; Exterior Preservation
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Emergency Repair Response
-                            </li>
-</ul>
-<a class="inline-flex w-full items-center justify-center py-4 bg-primary text-on-primary rounded-lg font-bold hover:bg-primary-container transition-colors" href="contact.html">Book a Service</a>
-</div>
-<!-- Plumbing & Electrical -->
-<div class="group bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-all">
-<div class="flex items-start justify-between mb-8">
-<div class="w-16 h-16 bg-surface-container-high rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="engineering">engineering</span>
-</div>
-<span class="text-surface-container-highest font-black text-4xl opacity-50">04</span>
-</div>
-<h3 class="text-2xl font-bold font-headline text-primary mb-4">Plumbing &amp; Electrical</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">
-                            The critical infrastructure of your home deserves professional attention. We provide certified plumbing and electrical services that prioritize safety, efficiency, and modern standards.
-                        </p>
-<ul class="space-y-3 mb-10">
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Complete System Overhauls
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Smart Home Integrations
-                            </li>
-<li class="flex items-center gap-3 text-sm font-semibold text-primary">
-<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
-                                Licensed Safety Inspections
-                            </li>
-</ul>
-<a class="inline-flex w-full items-center justify-center py-4 bg-primary text-on-primary rounded-lg font-bold hover:bg-primary-container transition-colors" href="contact.html">Book a Service</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Signature Component: Project Shield -->
+<!-- Waterproofing Services -->
 <section class="py-24 bg-surface-container-low">
 <div class="max-w-7xl mx-auto px-5 sm:px-8">
-<div class="project-shield bg-surface-container-lowest p-12 flex flex-col md:flex-row items-center gap-12 shadow-sm">
-<div class="w-full md:w-1/2">
-<img class="w-full rounded-lg object-cover h-80" data-alt="modern kitchen renovation with dark navy cabinets and gold hardware with bright natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjDGE_UDuOQgXHH2qSnP7bSDZTKop6BO1w-x4DHSHh5iX17bqjskLEGsb_WWokee_VsDfE0GLt9GmAw7NMmEZ65z44x91hStZRL8iJ54OuGOxn5ZhtZqN_i_bL1mwB_lOfLIAbAhSwZeO4xL8pM5G404wbasMmHnxSCJHbrLXNB0HYeD8BMKhQtfNfsqCTTQNcfxSWjhTM8wODywyF-aHxh2rcXB5ovmt-rqQDqICsnrBCb8raBdDQFHDdMC3PWP7Sg_wjmV6S5Wo"/>
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-10 tracking-tight">Waterproofing Services</h2>
+<div class="space-y-8">
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<span class="service-image-index">10</span>
+<img alt="HDPE membrane installation" loading="lazy" src="web%20images/services/HDPE%20Sheet%20Membrane%201.webp"/>
 </div>
-<div class="w-full md:w-1/2">
-<h3 class="text-3xl font-black font-headline text-primary mb-4 tracking-tight">Our Promise of Precision</h3>
-<p class="text-on-surface-variant text-lg mb-8 leading-relaxed italic">
-                            "SWE Construction transformed our outdated property into a modern architectural landmark. Their attention to detail during the structural phase was truly world-class."
+<div class="p-8">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">HDPE Sheet</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            HDPE (high-density polyethylene) sheet membrane is a type of sheet membrane used for waterproofing applications. It is a highly durable and versatile material that is used in various construction projects, including roofs, plaza decks, foundation walls, and tunnels. HDPE sheet membranes are composed of high-density polyethylene, which is a thermoplastic polymer that has a high strength-to-density ratio, excellent chemical resistance, and low moisture absorption. The membrane is typically supplied in rolls, which are easy to handle and install.
                         </p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary font-bold" data-icon="verified">verified</span>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            HDPE sheet membranes are installed by first preparing the surface to be waterproofed by cleaning and smoothing it out. The membrane is then unrolled and cut to the appropriate size, and the edges are sealed using specialized adhesives or heat welding techniques. The membrane is then secured in place using mechanical fasteners.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            HDPE sheet membrane is a reliable and effective waterproofing solution that offers excellent durability and chemical resistance. It is a popular choice for a variety of construction projects due to its ease of installation and cost-effectiveness.
+                        </p>
 </div>
-<div>
-<p class="font-bold text-primary">Marcus Sterling</p>
-<p class="text-sm text-on-surface-variant">Real Estate Developer</p>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<span class="service-image-index">9</span>
+<img alt="Grouting work detail" loading="lazy" src="web%20images/services/grouting.webp"/>
 </div>
+<div class="p-8 md:order-1">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Epoxy Injection Grouting</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Epoxy injection grouting is a type of waterproofing method that involves injecting epoxy resins into cracks, voids, and gaps in concrete or masonry structures. The process involves injecting the epoxy resin into the cracks under pressure, which helps to fill the voids and form a strong, durable bond.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            Epoxy injection grouting is commonly used to repair and waterproof a variety of structures, including buildings, bridges, tunnels, and dams. It can be used to seal cracks in concrete floors, walls, and foundations to prevent water intrusion and to provide additional structural strength.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<span class="service-image-index">20</span>
+<img alt="Swimming pool surface works" loading="lazy" src="web%20images/services/Swimming%20Pool.webp"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Swimming Pool Waterproofing</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Swimming pool waterproofing is an important process in building or renovating a swimming pool to prevent leaks and water damage. There are several methods of waterproofing a swimming pool.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<span class="service-image-index">6</span>
+<img alt="Crack filling before final finish" loading="lazy" src="web%20images/services/Crack%20Filling.webp"/>
+</div>
+<div class="p-8 md:order-1">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Crack Filling</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            With material, labour, and supervision charges for chipping and widening the weak points up to 50-100 mm depth, the chipped area shall be poured with free flowing non-shrinking grout up to ground level.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<span class="service-image-index">15</span>
+<img alt="Open roof surface work" loading="lazy" src="web%20images/services/rs=w_1107,h_554,cg_true%20(2).webp"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Terrace Waterproofing</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Terrace waterproofing is the process of protecting a terrace or flat roof from water infiltration by applying a waterproof layer on the surface. The waterproofing layer is typically made of materials such as bitumen, polyurethane, or acrylic coatings. Water infiltration can cause damage to the terrace, the underlying structure, and even the interior of the building. Therefore, proper terrace waterproofing is essential to prevent these issues and ensure the longevity of the building.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<span class="service-image-index">1</span>
+<img alt="Brick bat coba finish detail" loading="lazy" src="web%20images/services/Brick%20Bat%20Coba%202.webp"/>
+</div>
+<div class="p-8 md:order-1">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Brick Bat Coba</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Brickbat Coba waterproofing is an effective way of providing waterproofing and insulation for thermal comfort for flat RCC roofs to prevent leakage of water.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<span class="service-image-index">19</span>
+<img alt="Waterproofing treatment at a service site" loading="lazy" src="web%20images/services/rs=w_1200,cg_true,m.webp"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Wall Injection Grouting</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Injection grouting is defined as the process of filling the cracks and voids under pressure in the structural members for repairing the cracks and strengthening the damaged or deteriorated masonry structures.
+                        </p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Construction -->
+<section class="py-24 bg-gradient-to-br from-primary-fixed via-primary-fixed/65 to-surface-container">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-10 tracking-tight">Construction</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest rounded-[1.5rem] border border-outline-variant/25 p-6 shadow-sm">
+<div class="service-strip-card mb-6">
+<span class="service-image-index">14</span>
+<img alt="RCC structure at active site" loading="lazy" src="web%20images/services/RCC.webp"/>
+</div>
+<h3 class="text-2xl font-black font-headline text-primary mb-3">RCC</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            RCC stands for Reinforced Cement Concrete, which is a composite material made up of cement, aggregates (such as sand and gravel), water, and reinforcement (usually steel bars or mesh). RCC is widely used in construction as it is strong, durable, and versatile.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            The reinforcement in RCC is added to enhance the strength and durability of the concrete. The steel bars or mesh are placed in the formwork before the concrete is poured, and they help to resist tensile forces that may develop in the concrete. The concrete, in turn, provides compressive strength to the structure.
+                        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-[1.5rem] border border-outline-variant/25 p-6 shadow-sm">
+<div class="service-strip-card mb-6">
+<span class="service-image-index">12</span>
+<img alt="Plaster base application" loading="lazy" src="web%20images/services/Plaster%201.webp"/>
+</div>
+<h3 class="text-2xl font-black font-headline text-primary mb-3">PLASTER</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            PLASTER : Toilet plaster and ghutai It may used for cement mortar for plastering to render it water proof. It shall be measured by weight.The ratio of cement and sand for first coat plaster is 1:4
+                        </p>
 </div>
 </div>
 </div>
 </div>
 </section>
+<!-- Epoxy Painting -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-10 tracking-tight">Epoxy Painting</h2>
+<div class="space-y-8">
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px]">
+<span class="service-image-index">7</span>
+<img alt="Epoxy painting top coat" loading="lazy" src="web%20images/services/epoxy%20painting%202.webp"/>
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Epoxy Top Coat</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Epoxy top coats create a dense protective finish that improves durability, surface life, and resistance to wear. This treatment is especially useful in areas that face moisture, movement, and repeated use.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            The final coat also improves the visual finish of the surface by giving it a more uniform, sealed, and easy-to-maintain appearance.
+                        </p>
+</div>
+</article>
+<article class="grid grid-cols-1 md:grid-cols-2 overflow-hidden rounded-[1.5rem] border border-outline-variant/25 bg-surface-container-lowest shadow-sm">
+<div class="service-strip-card rounded-none border-0 shadow-none min-h-[320px] md:order-2">
+<span class="service-image-index">8</span>
+<img alt="Epoxy painting base stage" loading="lazy" src="web%20images/services/epoxy%20painting1.webp"/>
+</div>
+<div class="p-8 md:order-1">
+<h3 class="text-2xl font-black font-headline text-primary mb-3">Epoxy Base Preparation</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Base preparation is critical before epoxy painting is applied. The surface must be cleaned, leveled, and prepared properly so the coating bonds well and performs over the long term.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mt-4">
+                            A strong base layer helps reduce peeling, cracking, and uneven coverage, while supporting a smoother and more reliable final finish.
+                        </p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Strips -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-5 sm:px-8">
+<div class="max-w-6xl mx-auto space-y-8">
+<h2 class="text-4xl md:text-5xl font-black font-headline text-primary mb-10 tracking-tight">Gallery</h2>
+<div class="service-strip-grid">
+<div class="service-strip-card span-1"><span class="service-image-index">1</span><img alt="Brick bat coba finish detail" loading="lazy" src="web%20images/services/Brick%20Bat%20Coba%202.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">2</span><img alt="Brick bat coba waterproofing layer" loading="lazy" src="web%20images/services/Brick%20Bat%20Coba.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">3</span><img alt="Chemical coating close detail" loading="lazy" src="web%20images/services/Chemical%20coating%202.webp"/></div>
+<div class="service-strip-card span-2"><span class="service-image-index">4</span><img alt="Chemical coating final layer" loading="lazy" src="web%20images/services/Chemical%20Coating%203.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">5</span><img alt="Chemical coating application" loading="lazy" src="web%20images/services/chemical%20coating.webp"/></div>
+<div class="service-strip-card span-2-half"><span class="service-image-index">6</span><img alt="Crack filling before final finish" loading="lazy" src="web%20images/services/Crack%20Filling.webp"/></div>
+<div class="service-strip-card span-2-half"><span class="service-image-index">7</span><img alt="Epoxy painting top coat" loading="lazy" src="web%20images/services/epoxy%20painting%202.webp"/></div>
+</div>
+<div class="service-strip-grid">
+<div class="service-strip-card span-1"><span class="service-image-index">8</span><img alt="Epoxy painting base stage" loading="lazy" src="web%20images/services/epoxy%20painting1.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">9</span><img alt="Grouting work detail" loading="lazy" src="web%20images/services/grouting.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">10</span><img alt="HDPE membrane installation" loading="lazy" src="web%20images/services/HDPE%20Sheet%20Membrane%201.webp"/></div>
+<div class="service-strip-card span-2"><span class="service-image-index">11</span><img alt="HDPE membrane finishing layer" loading="lazy" src="web%20images/services/HDPE%20Sheet%20Membrane%202.webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">12</span><img alt="Plaster base application" loading="lazy" src="web%20images/services/Plaster%201.webp"/></div>
+<div class="service-strip-card span-2-half"><span class="service-image-index">13</span><img alt="Wall plaster finish" loading="lazy" src="web%20images/services/plaster.webp"/></div>
+<div class="service-strip-card span-2-half"><span class="service-image-index">14</span><img alt="RCC structure at active site" loading="lazy" src="web%20images/services/RCC.webp"/></div>
+</div>
+<div class="service-strip-grid">
+<div class="service-strip-card span-1"><span class="service-image-index">15</span><img alt="Open roof surface work" loading="lazy" src="web%20images/services/rs=w_1107,h_554,cg_true%20(2).webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">16</span><img alt="Crew working on slab finishing" loading="lazy" src="web%20images/services/rs=w_1107,h_554,cg_true%20(4).webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">17</span><img alt="Scaffold-based service work" loading="lazy" src="web%20images/services/rs=w_1107,h_554,cg_true%20(6).webp"/></div>
+<div class="service-strip-card span-2"><span class="service-image-index">18</span><img alt="On-site execution image one" loading="lazy" src="web%20images/services/rs=w_1200,cg_true,m%20(1).webp"/></div>
+<div class="service-strip-card span-1"><span class="service-image-index">19</span><img alt="Waterproofing treatment at a service site" loading="lazy" src="web%20images/services/rs=w_1200,cg_true,m.webp"/></div>
+<div class="service-strip-card span-full"><span class="service-image-index">20</span><img alt="Swimming pool surface works" loading="lazy" src="web%20images/services/Swimming%20Pool.webp"/></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
 <!-- FAQ Section -->
 <section class="py-24 bg-surface">
 <div class="max-w-4xl mx-auto px-5 sm:px-8">
 <div class="text-center mb-16">
-<h2 class="text-4xl font-black font-headline text-primary mb-4">Frequently Asked Questions</h2>
-<p class="text-on-surface-variant">Your guide to working with SWE Construction.</p>
+<h2 class="text-4xl font-black font-headline text-primary mb-4">FAQs - Sabila Waterproofing Enterprises</h2>
+<p class="text-on-surface-variant">Helpful answers about our waterproofing services, inspections, warranty, and quotation process.</p>
 </div>
 <div class="space-y-6">
-<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">What is your typical project timeline?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed" data-faq-panel>
-                            Timelines vary based on complexity. A residential renovation typically takes 8-12 weeks, while new construction projects range from 6-12 months. We provide a detailed schedule during the blueprinting phase.
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">What services do you provide?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed" data-faq-panel>
+                            We provide complete waterproofing solutions including terrace waterproofing, bathroom waterproofing, basement protection, wall leakage repair, and water tank waterproofing.
                         </div>
 </div>
-<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Do you handle all necessary building permits?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
-                            Yes, our comprehensive service includes all legal and municipal paperwork, ensuring your project meets all local building codes and zoning requirements.
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Why is waterproofing important?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Waterproofing prevents water leakage, protects your building structure, increases durability, and avoids issues like dampness, mold, and cracks.
                         </div>
 </div>
-<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Is SWE Construction fully licensed and insured?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
-                            Absolutely. We are fully bonded, licensed, and carry comprehensive liability insurance for all residential and commercial sites.
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">How do I know if my property needs waterproofing?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+<p>Common signs include:</p>
+<ul class="mt-3 list-disc space-y-2 pl-5">
+<li>Water leakage or seepage</li>
+<li>Damp walls or ceilings</li>
+<li>Paint peeling</li>
+<li>Musty smell</li>
+</ul>
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">How long does waterproofing last?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Our waterproofing solutions are designed to last long, ensuring durability with proper materials and techniques.
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Do you provide a warranty?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Yes, we provide a 10-year warranty on our waterproofing services, applicable on selected treatments and conditions.
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">How much does waterproofing cost?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+<p>The cost depends on:</p>
+<ul class="mt-3 list-disc space-y-2 pl-5">
+<li>Area size</li>
+<li>Type of leakage</li>
+<li>Treatment method</li>
+</ul>
+<p class="mt-4">We provide a free site inspection and then give a proper quotation. Clients can also choose the materials or chemicals they prefer for the work.</p>
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Is waterproofing safe for homes?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Yes, our solutions are completely safe for residential, commercial, and industrial properties.
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Do you offer inspection services?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Yes, we provide a free site inspection to identify the problem and suggest the best solution.
+                        </div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg" data-faq-item><button class="flex w-full items-center justify-between gap-4 text-left" type="button" aria-expanded="false" data-faq-trigger><h4 class="font-bold text-primary font-headline text-lg">Can waterproofing be done on old buildings?</h4><span class="material-symbols-outlined text-primary" data-faq-icon>add</span></button><div class="mt-4 text-on-surface-variant text-sm leading-relaxed hidden" data-faq-panel>
+                            Yes, we specialize in waterproofing and repairing both new and old buildings.
                         </div>
 </div>
 </div>
@@ -291,14 +529,14 @@
 <!-- Final CTA -->
 <section class="bg-[#001c39] py-20 text-center relative overflow-hidden">
 <div class="absolute top-0 right-0 p-24 opacity-5">
-<span class="material-symbols-outlined text-[200px] text-white" data-icon="architecture">architecture</span>
+<span class="material-symbols-outlined text-[200px] text-white" data-icon="water_drop">water_drop</span>
 </div>
 <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
-<h2 class="text-4xl md:text-5xl font-black font-headline text-white mb-6">Ready to Start Your Project?</h2>
+<h2 class="text-4xl md:text-5xl font-black font-headline text-white mb-6">Ready to Start Your Waterproofing Work?</h2>
 <p class="text-blue-100 text-xl mb-10 max-w-2xl mx-auto">
-                    Consult with our expert engineers and designers today to turn your vision into a structural reality.
+                    Consult with our waterproofing team today to inspect leakage issues and recommend the right protective treatment.
                 </p>
-<a class="inline-flex bg-secondary-container text-on-secondary-fixed py-4 px-10 rounded-lg font-black text-lg hover:bg-secondary transition-all shadow-lg active:scale-95" href="contact.html">Request a Free Quote</a>
+<a class="inline-flex bg-secondary-container text-on-secondary-fixed py-4 px-10 rounded-lg font-black text-lg hover:bg-secondary transition-all shadow-lg active:scale-95" href="contact.html">Request a Free Waterproofing Quote</a>
 </div>
 </section>
 </main>
